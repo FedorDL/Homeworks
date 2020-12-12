@@ -1,0 +1,4 @@
+#git project files
+.idea/
+#test file for tasks
+Lesson 2/test.py
