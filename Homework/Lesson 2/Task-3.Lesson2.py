@@ -37,3 +37,16 @@ elif number.find("2") >= 0:
     print("Максимальная цифра в данном числе равна 2")
 elif number.find("1") >= 0:
     print("Максимальная цифра в данном числе равна 1")
+
+#Решение через for не доделал, не могу понять как сохранить максимальное значение в переменной
+num = int(input("Введите число: "))
+s = str(num)
+n = len(s)
+for i in range(n - 1):
+    if int(s[i]) > int(s[i + 1]):
+        a = int(s[i])
+        print(a, end=' ')
+    else:
+        b = int(s[i + 1])
+        print(b)
+
