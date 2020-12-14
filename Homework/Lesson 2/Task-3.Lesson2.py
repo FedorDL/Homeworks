@@ -45,8 +45,10 @@ n = len(s)
 for i in range(n - 1):
     if int(s[i]) > int(s[i + 1]):
         a = int(s[i])
-        print(a, end=' ')
+        #print(a, end=' ')
     else:
         b = int(s[i + 1])
-        print(b)
+        #print(b)
+        if b > a:
+
 
