@@ -8,10 +8,12 @@
 import math
 a = [2, -5, 8, 9, -25, 25, 4]
 c = []
-for i in a:
-    if int(i) > 0 and math.sqrt(int(i)) % 10 == 0:
-        c.append(math.sqrt(int(i)))
+for i in range(len(a)):
+    if a[i] > 0 and math.sqrt(a[i]) * 10 % 10 == 0:
+        c.append(int(math.sqrt(a[i])))
 print(c)
+
+print('\n')
 
 # Задача-2: Дана дата в формате dd.mm.yyyy, например: 02.11.2013.
 # Ваша задача вывести дату в текстовом виде, например: второе ноября 2013 года.
@@ -31,13 +33,20 @@ data = '02.11.2013'
 lastdata = data.split('.')
 print('{} {} {}'.format(day[lastdata[0]], month[lastdata[1]],lastdata[2]))
 
+print('\n')
 
 # Задача-3: Напишите алгоритм, заполняющий список произвольными целыми числами
 # в диапазоне от -100 до 100. В списке должно быть n - элементов.
 # Подсказка:
 # для получения случайного числа используйте функцию randint() модуля random
+import random
+n = int(input('Введите число элементов в списке: '))
+a = []
+for i in range(n):
+    a.append(random.randint(-100, 100))
+print(a)
 
-
+print('\n')
 
 # Задача-4: Дан список, заполненный произвольными целыми числами.
 # Получите новый список, элементами которого будут:
@@ -45,3 +54,19 @@ print('{} {} {}'.format(day[lastdata[0]], month[lastdata[1]],lastdata[2]))
 # например, lst = [1, 2, 4, 5, 6, 2, 5, 2], нужно получить lst2 = [1, 2, 4, 5, 6]
 # б) элементы исходного списка, которые не имеют повторений:
 # например, lst = [1 , 2, 4, 5, 6, 2, 5, 2], нужно получить lst2 = [1, 4, 6]
+
+lst = [1, 2, 4, 5, 6, 2, 5, 2]
+lst2 = []
+for i in lst:
+    if not i in lst2:
+        lst2.append(i)
+print(lst2)
+
+print('\n')
+
+lst = [1, 2, 4, 5, 6, 2, 5, 2]
+lst2 = []
+for i in lst:
+    if lst.count(i) == 1:
+        lst2.append(i)
+print(lst2)
