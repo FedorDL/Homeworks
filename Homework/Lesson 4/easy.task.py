@@ -37,19 +37,20 @@ def my_round(number, ndigits):
     a = str(rnumber)
     c =[]
     d =[]
-    for i in range(len(a) - 1):
-        if int(a[i + 1]) > 6:
-            c.append(int(a[i]) + 1)
+    for i in a:
+        if int(i) > 6:
+            c.append(int(i) + 1)
         else:
-            c.append(int(a[i]))
-    for u in range(len(c) - 1):
-        if int(c[u]) < 9:
-            d.append(int(c[u]))
+            c.append(int(i))
+    for u in c:
+        if int(u) < 9:
+            d.append(int(u))
         else:
             d.append(1)
-    e = ''.join(map(str,d))
-    f = int(e) / 10 ** (ndigits - 2)
-    print(f)
+        print(d)
+    #e = ''.join(map(str,d))
+   #f = int(e) / 10 ** ndigits
+    #print(f)
 
     pass
 
